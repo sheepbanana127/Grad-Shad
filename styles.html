@@ -1,23 +1,81 @@
 <!DOCTYPE html>
 <!--Create a div with the title “css shadows” - Insert the content “SHADOW EFFECT” - Use internal css and the id selector “shadows” to make the division element 600px 
 wide, 150px high, centered on the page, with a border of 5px and padding of 10px.  The text should be sized to 30px.  
-Provide the css for shadows with blur and color effects.  Don’t forget to refer to the id in your div start tag. -->
+Provide the css for shadows with blur and color effects.  Don’t forget to refer to the id in your div start tag. Create a div with the title “css gradients” - Use internal css and the id selector “gradient” to make the division element 800px wide, 200px high, centered on the page, with a border of 10px and padding of 15px.  Provide the css for shadows with blur and color effects. Provide the css for a gradient in the div.  You will be using the background-image property.  Don’t forget to refer to the id in your div start tag. -->
 <html>
   <head>
     <style>
+      .wrapper {
+        height: 63vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+        
+      #gradient {
+          width: 800px;
+          height: 200px;
+          border: solid black 10px;
+          padding: 15px;
+          box-shadow: 5px 5px 10px blue;
+          background-image: linear-gradient(to right, red, aqua, violet);
+        }
+        
       #shadows {
         width: 600px;
         height: 150px;
+        padding: 10px;
         border: 5px solid black;
         font-size: 30px;
         text-shadow: 2px 2px 5px red;
-        box shadow: 4px 4px 10px red;
+        box-shadow: 4px 4px 10px red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+        li {
+            list-style: none;
+        }
+        
+        li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        
+        li a:hover {
+            background-color: black;
+        }
+        
+        li a:active {
+            color: grey;
+        }
+        
     </style>
   </head>
   <body>
-    <div id="shadows">
-      <p>SHADOW EFFECT</p>
+    <div class="wrapper">
+      <div id="shadows">
+        <p>SHADOW EFFECT</p>
+      </div>
     </div>
+      <h1>The div is 630px wide. Yes, you can center text horizontally in a div using padding. You apply the padding to the text, not the div.</h1>
+      <hr>
+      <pre>
+      CSS Gradients allow you to smoothly transition from one color to another.
+      
+      The three types of gradients are linear (in a line), radial (grows from a center point), and conic gradients (rotated around a center point).
+      </pre>
+      <div class="wrapper">
+          <div id="gradient">
+            <ul>
+                <li><a href="https://github.com/daniels-nmhs/your-webpage-sheepbanana127/blob/main/draft.html" target="_blank">Personal Portfolio Page</a></li>
+                <li><a href="https://w3schools.com" target="_blank">w3schools</a></li>
+                <li><a href="https://athletic.net" target="_blank">Free Track and Field Results</a></li>
+                <li><a href="https://docs.google.com/document/d/1i03wnQPYLBK1REIFdh3dOMMp_hDQweOASvbrt4i7EfA/edit" target="_blank">Table Notes</a></li>
+                <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">Pseudo-Class Tutorial</a></li>
+          </div>
+      </div>
+      <h1 style="text-align:center;">The div is 850px wide.</h1>
   </body>
 </html>
